@@ -15,3 +15,9 @@ zlabel<-"Critical temperature (°C)"
 m<-plot3dm(d,zlabel)
 points(m$x,m$y,col=cl.scl(m$z),pch=15,cex=0.5)
 
+# -------------------------------------------------------------
+
+m<-persp3dm(d,zlabel)
+points(trans3d(d$par,d$lon,d$lat,m),col=cl.scl(d$val),pch=15,cex=0.5)
+
+# -------------------------------------------------------------
